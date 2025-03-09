@@ -5,9 +5,7 @@ public:
     int* data;
 
     DoubleDeleteExample() {
-        data = new int(42);
-        std::cout << "Memory allocated: " << *data << std::endl;
-        delete data;
+        std::cout << "test" << std::endl;
     }
 };
 
