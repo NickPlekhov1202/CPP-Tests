@@ -7,9 +7,6 @@ public:
     Example() {
         data = new int(42); // Allocate memory dynamically
         std::cout << "Memory allocated: " << *data << std::endl;
-    }
-
-    ~Example() {
         delete data; // Free the allocated memory
         std::cout << "Memory freed" << std::endl;
     }
