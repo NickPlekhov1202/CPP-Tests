@@ -5,10 +5,7 @@ public:
     int* data;
 
     Example() {
-        data = new int(42); // Allocate memory dynamically
-        std::cout << "Memory allocated: " << *data << std::endl;
-        delete data; // Free the allocated memory
-        std::cout << "Memory freed" << std::endl;
+        std::cout << "test" << std::endl;
     }
 
     void useAfterDelete() {
@@ -29,10 +26,7 @@ void accessAfterScope() {
     int* danglingPtr;
 
     {
-        int* localPtr = new int(77);
-        danglingPtr = localPtr;
-        std::cout << "Inside block: " << *localPtr << std::endl;
-        delete localPtr;  // Memory freed here
+        std::cout << "test" << std::endl;
     }
 
     std::cout << "After scope, accessing deleted memory: " << *danglingPtr << std::endl; // Undefined Behavior
