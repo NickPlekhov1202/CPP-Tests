@@ -7,14 +7,7 @@ public:
     DoubleDeleteExample() {
         data = new int(42);
         std::cout << "Memory allocated: " << *data << std::endl;
-    }
-
-    ~DoubleDeleteExample() {
-        delete data; // First delete
-        std::cout << "Memory freed in destructor" << std::endl;
-
-        delete data; // Second delete (Undefined Behavior)
-        std::cout << "Memory freed again (double delete!)" << std::endl;
+        delete data;
     }
 };
 
