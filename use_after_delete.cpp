@@ -28,15 +28,6 @@ void danglingPointerDemo() {
     std::cout << "Accessing deleted pointer: " << *ptr << std::endl; // Use-after-delete
 }
 
-void doubleDeleteDemo() {
-    int* ptr = new int(50);
-    delete ptr;
-    std::cout << "Memory freed once" << std::endl;
-
-    delete ptr;  // Double delete - Undefined Behavior
-    std::cout << "Memory freed twice (double delete)" << std::endl;
-}
-
 void accessAfterScope() {
     int* danglingPtr;
 
